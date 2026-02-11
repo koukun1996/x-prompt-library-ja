@@ -13,6 +13,12 @@ x-prompt-library-ja/
 ├── README.md          # プロジェクト説明
 ├── CLAUDE.md          # AI アシスタント向けガイド（本ファイル）
 ├── .gitignore         # Git 除外設定
+├── guides/
+│   └── writing-style/             # 文体ガイド（バージョン管理）
+│       └── yamada-writing-style-guide-v4.md  # 山田の文体ガイド v4
+├── logs/
+│   └── profile-optimization/      # プロフィール改善ログ（日付管理）
+│       └── 2026-02-12-profile-cta-optimization.md
 └── tools/
     └── x-fetcher/     # xAI API (Grok) を使った X データ取得ツール
         ├── README.md          # セットアップ手順・使い方
