@@ -9,7 +9,10 @@ X のリアルタイムデータを取得・分析する。
   python fetch.py "query" [@handle1 @handle2] [--hours 24] [--web] [--raw]
   python fetch.py "@elonmusk の最新投稿を要約して"
   python fetch.py "AI規制に関する議論を分析して" --hours 48
-  python fetch.py --template user_recent --handle @openai --hours 12
+  python fetch.py --template user_monitor --handle @openai --hours 12
+  python fetch.py --template topic_research --keyword "生成AI 規制"
+  python fetch.py --template trend_analysis
+  python fetch.py --template trend_analysis --topic "量子コンピュータ"
 """
 
 import argparse
@@ -127,8 +130,15 @@ def main():
   python fetch.py "AIに関する最新の議論を教えて"
   python fetch.py "@openai の最近の投稿を要約して" --hours 24
   python fetch.py "半導体業界のトレンドを分析して" --web
-  python fetch.py --template user_recent --handle @elonmusk --hours 12
-  python fetch.py --template topic_search --keyword "生成AI 規制"
+  python fetch.py -t user_monitor --handle @elonmusk --hours 12
+  python fetch.py -t topic_research --keyword "生成AI 規制"
+  python fetch.py -t topic_research --keyword "半導体" --hours 48
+  python fetch.py -t trend_analysis
+  python fetch.py -t trend_analysis --topic "量子コンピュータ"
+  python fetch.py -t thread_summary --url "https://x.com/user/status/123"
+  python fetch.py -t comparative --handle @user1 --handle @user2
+  python fetch.py -t sentiment --keyword "iPhone" --hours 24
+  python fetch.py -t breaking_news --keyword "地震"
   python fetch.py --list-templates
         """,
     )
@@ -196,7 +206,12 @@ def main():
         for name, info in TEMPLATES.items():
             print(f"  {name}")
             print(f"    説明: {info['description']}")
-            print(f"    パラメータ: {', '.join(info['params'])}")
+            required = info["params"]
+            optional = info.get("optional_params", [])
+            params_str = ", ".join(required) if required else "(なし)"
+            if optional:
+                params_str += f"  [任意: {', '.join(optional)}]"
+            print(f"    パラメータ: {params_str}")
             print()
         return
 
