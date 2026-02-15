@@ -18,7 +18,8 @@ x-prompt-library-ja/
 │       └── yamada-writing-style-guide-v4.md  # 山田の文体ガイド v4
 ├── logs/
 │   ├── profile-optimization/      # プロフィール改善ログ（日付管理）
-│   │   └── 2026-02-12-profile-cta-optimization.md
+│   │   ├── 2026-02-12-profile-cta-optimization.md
+│   │   └── 2026-02-15-menta-visasq-profile-optimization.md
 │   ├── viral-app-monetization/    # バイブコーディング収益化分析
 │   │   └── 2026-02-12-vibe-coding-monetization-analysis.md
 │   └── side-income-strategy/      # 食い繋ぎ収入戦略
