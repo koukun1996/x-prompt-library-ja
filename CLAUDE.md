@@ -21,8 +21,10 @@ x-prompt-library-ja/
 │   │   └── 2026-02-12-profile-cta-optimization.md
 │   ├── viral-app-monetization/    # バイブコーディング収益化分析
 │   │   └── 2026-02-12-vibe-coding-monetization-analysis.md
-│   └── side-income-strategy/      # 食い繋ぎ収入戦略
-│       └── 2026-02-13-dev-side-income-strategy.md
+│   ├── side-income-strategy/      # 食い繋ぎ収入戦略
+│   │   └── 2026-02-13-dev-side-income-strategy.md
+│   └── twitter-engagement-analysis/  # Xエンゲージメント分析
+│       └── 2026-02-24-yamadaikaaa-engagement-evaluation.md
 └── tools/
     └── x-fetcher/     # xAI API (Grok) を使った X データ取得ツール
         ├── README.md          # セットアップ手順・使い方
